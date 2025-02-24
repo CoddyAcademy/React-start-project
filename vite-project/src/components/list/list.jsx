@@ -23,7 +23,7 @@ class List extends Component{
 
 
     render(){
-        const {title, viewers} = this.props
+        const {title, viewers, onDelete} = this.props
         const {favourite, liked} = this.state
         return(
             <li className={`list-group-item d-flex justify-content-between p-4 list ${favourite && 'active'}`}>
@@ -36,7 +36,7 @@ class List extends Component{
                     <button onClick={this.clickFav} type='button' className='btn-cookie btn-sm'>
                         <i className='fas fa-cookie'></i>
                     </button>
-                    <button type='button' className='btn btn-trash btn-sm'>
+                    <button onClick={onDelete} type='button' className='btn btn-trash btn-sm'>
                         <i className="fas fa-trash"></i>
                      </button>
                      <i className={`fas fa-star ${liked && 'show'}`}></i>

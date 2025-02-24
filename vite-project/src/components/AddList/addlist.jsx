@@ -1,11 +1,11 @@
 import AddInputs from '../addInputs/addinputs'
 import './addlist.css'
 
-function Addlist(){
+function Addlist({addForm}){
     return(
         <div className='addlist p-5'>
             <h2>Yangi kino qo'shish</h2>
-            <AddInputs />
+            <AddInputs addForm={addForm} />
         </div>
     )
 }
